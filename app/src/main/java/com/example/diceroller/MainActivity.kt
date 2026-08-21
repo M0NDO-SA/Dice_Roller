@@ -26,6 +26,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 import com.example.diceroller.ui.theme.DiceRollerTheme
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+
 
 class MainActivity : ComponentActivity() {
 
@@ -59,6 +62,8 @@ fun DiceWithButtonAndImage(
         )
         Button(
             onClick = {
+                result = (1..6).random()
+
             }
         ) {
             Text(
